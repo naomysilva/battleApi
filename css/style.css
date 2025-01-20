@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxanium", cursive;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    #88dd4a,
+    #fff
+  ); /* Gradiente (opcional) */
+  background-image: url("../imagens/pokedex.jpg"); /* Caminho da imagem */
+  background-size: cover; /* Faz a imagem preencher toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  min-height: 100vh; /* Garante que a altura mínima seja 100% da tela */
+  margin: 0; /* Remove margens padrão do body */
+  position: relative;
+}
+
+main {
+  display: flex;
+  margin-top: 2%;
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokedex {
+  width: 100%;
+}
+
+.pokemon_image {
+  width: 100%;
+}
+
+.pokemon_data {
+  position: absolute;
+  font-weight: 600;
+  color: #3e4a64;
+  top: 54.2%;
+  left: 20%;
+  font-size: clamp(15px, 10vw, 40px);
+}
+
+.pokemon_name {
+  color: #3a444d;
+  text-transform: capitalize;
+}
+
+.form {
+  position: absolute;
+  background-color: red;
+  width: 40%;
+  top: 65%;
+  left: 20.5%;
+}
+
+.input_search {
+  width: 100%;
+  padding: 4%;
+  outline: none;
+  border: 4px solid #333;
+  border-radius: 5px;
+  font-weight: 600px;
+  color: #3a444d;
+  font-size: clamp(8px, 5vw, 1rem);
+  box-shadow: -3px 4px 0 #888, -5px 7px #333;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 10%;
+  left: 43%;
+  width: 40%;
+  transform: translate(-57%, 0);
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  width: 50%;
+  padding: 4%;
+  border: 2px solid #000;
+  font-size: clamp(8px, 5vw, 1rem);
+  font-weight: 600;
+  color: white;
+  background-color: #444;
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+
+.btn-choice:active {
+  box-shadow: inset -4px 4px 0 #39883b;
+  font-size: 0.9rem;
+}
+
+.title {
+  color: #fff;
+  margin-bottom: 11rem;
+  font-size: 4.3rem;
+}
+
+.choice {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.btn-choice {
+  padding: 19px 74px;
+  border-radius: 4px;
+  border: 1px solid #0a800e;
+  background: #42985a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.text-default {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #448d23;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+}
+
+.pokemons {
+  display: flex;
+}
+
+.atributos {
+  max-width: 200px;
+  width: 100%;
+}
+
+.btnPokemon {
+  padding: 10px 7px;
+  border-radius: 4px;
+  border: 1px solid #0a800e;
+  background: #42985a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.menu {
+  display: block;
+}
+
+.battle {
+  display: flex;
+  justify-content: space-evenly;
+  display: none;
+}
+
+
+
+.image_champ {
+  width: 100%;
+  max-width: 300px;
+}
+
+.pokemons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 16px;
+}
+
+.pokemon_image {
+  width: 100px;
+  height: 100px;
+}
+
+.atributos {
+  margin-top: 10px;
+}
+
+.btnPokemon {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btnPokemon:hover {
+  background-color: #45a049;
+}
+
+
+.imgPokemon {
+  width: 100%;
+}
+
+.resultados {
+  display: none;
+}
+
+.lutarPokemon {
+  display: none;
+  margin-top: 40px;
+  padding: 9px;
+  background-color: white;
+  color: #b13200;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 244px;
+  font-size: 2rem;
+  font-weight: 700;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Links -->
+    <link rel="icon" href="./favicons/favicon-16x16.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Main JS -->
+    <script defer src="./js/script.js"></script>
+
+    <title>Pokedex</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">Batalha de Pokemons</h1>
+    </main>
+    <div class="menu">
+      <span class="choice"> Escolha um pokemon </span>
+
+      <br />
+      <button class="btn-choice">Escolher</button>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="text-default">Pokemons</p>
+        <div class="pokemons"></div>
+      </div>
+    </div>
+    
+    <div class="battle">
+      <div class="mychamp">
+        <div id="pokemon_escolhido"></div>
+      </div>
+      <div class="adversary">
+        <div id="pokemon_adversario"></div>
+      </div>
+    </div>
+    <button class="lutarPokemon">Lutar</button>
+    <button class="againPlay"></button>
+    <span class="resultados"></span>
+  </body>
+</html>
